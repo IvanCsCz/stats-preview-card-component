@@ -41,17 +41,44 @@ body {
   line-height: 25px;
   opacity: 0.75;
 }
+
 .card-stats {
+  display: flex;
+  justify-content: space-between;
   margin-top: 72px;
   margin-right: 70px;
+}
+
+.card-stats-companies {
+  display: flex;
+  flex-direction: column;
+}
+.card-stats-templates {
+  display: flex;
+  flex-direction: column;
+}
+.card-stats-queries {
+  display: flex;
+  flex-direction: column;
+}
+.card-stats-companies-nums {
+  color: #fff;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  opacity: 1;
+}
+.card-stats-companies-text {
   font-size: 12px;
   font-weight: 400;
   line-height: 25px;
   letter-spacing: 1px;
+  opacity: 0.6;
   text-transform: uppercase;
 }
-
-.card-stats-num {
+/* .card-stats-num {
   display: flex;
   justify-content: space-between;
   font-size: 24px;
@@ -64,7 +91,7 @@ body {
   font-family: 'Lexend Deca';
   text-transform: uppercase;
   opacity: 0.6;
-}
+} */
 
 .card-img-container {
   position: relative;
@@ -83,4 +110,43 @@ body {
   right: 0;
   border-radius: 0 8px 8px 0;
   background-color: rgba(115, 0, 182, 0.5);
+}
+
+@media (max-width: 1200px) {
+  .card {
+    flex-direction: column;
+    width: 327px;
+  }
+  .card-img-container {
+    order: -10;
+    width: 327px;
+  }
+  .card-img-container-photo {
+    width: 327px;
+    border-radius: 8px 8px 0 0;
+  }
+  .card-img-container-overlay {
+    border-radius: 8px 8px 0 0;
+  }
+  .card-info {
+    width: 100%;
+    padding: 32px;
+  }
+  .card-title {
+    text-align: center;
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .card-desc {
+    margin-top: 16px;
+    margin-right: 0;
+    text-align: center;
+  }
+  .card-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 40px;
+    margin-right: 0;
+  }
 }
